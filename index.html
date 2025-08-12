@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swathi Burgula - Data Analyst | Ex-Infosys Software Quality Engineer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .btn-custom {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin: 10px;
+            display: inline-block;
+        }
+        
+        .btn-custom:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .skill-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .skill-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #764ba2;
+        }
+
+        .experience-timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #667eea;
+        }
+
+        .experience-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 30px;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid white;
+        }
+
+        .experience-item ul {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .experience-item li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+            border: none;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .project-card p {
+            word-wrap: break-word;
+            hyphens: none;
+            line-height: 1.6;
+            overflow-wrap: break-word;
+            word-break: keep-all;
+        }
+
+        .project-tech {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 2px;
+            white-space: nowrap;
+        }
+
+        /* Additional rules to prevent text splitting */
+        .project-card h5 {
+            word-break: keep-all;
+            overflow-wrap: break-word;
+        }
+
+        .project-card .text-muted {
+            word-break: keep-all;
+            overflow-wrap: break-word;
+        }
+
+        /* Prevent Power BI and other tech terms from breaking */
+        .project-tech {
+            word-break: keep-all;
+            overflow-wrap: break-word;
+        }
+
+        /* Force Power BI to stay together */
+        .project-card p:contains("Power BI"),
+        .project-card h5:contains("Power BI") {
+            word-break: keep-all;
+            overflow-wrap: break-word;
+        }
+
+        .certification-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about-text {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-text:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-card p {
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+
+        .project-card h6 {
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .project-card ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .project-card li {
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+
+        .project-card .text-success {
+            margin-top: 15px;
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        .section-title {
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Swathi Burgula</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1>Hi, I'm Swathi Burgula</h1>
+                        <p>Aspiring Data Analyst | Ex-Infosys Software Quality Engineer | Power BI | Excel | SQL | Python</p>
+                        <div class="hero-buttons">
+                            <a href="#about" class="btn-custom">Learn More</a>
+                            <a href="#contact" class="btn-custom">Get In Touch</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="fas fa-chart-line" style="font-size: 15rem; opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center section-title">
+                    <h2 class="display-4 fw-bold">About Me</h2>
+                    <p class="lead text-muted">Results-driven professional transitioning into Data Analytics</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Who I Am</h3>
+                    <p class="about-text">I am a results-driven professional with approximately 3 years of experience as a Software Quality Engineer at Infosys, now transitioning into Data Analytics.</p>
+                    <p class="about-text">I have completed multiple end-to-end analytics projects focused on business insights and data storytelling. I'm passionate about solving problems with data and delivering actionable insights that drive business decisions.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h3>What I Do</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i>Data visualization using Power BI</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Data analysis with Excel, SQL, and Python</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Automated testing and quality assurance</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Business insights and data storytelling</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Cross-functional team collaboration</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Problem-solving and attention to detail</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center section-title">
+                    <h2 class="display-4 fw-bold">Professional Experience</h2>
+                    <p class="lead text-muted">My journey in software quality and data analytics</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="experience-timeline">
+                        <div class="experience-item">
+                            <h5>Software Quality Engineer</h5>
+                            <h6 class="text-muted">Infosys Ltd, Hyderabad • April 2022 - January 2025</h6>
+                            <ul class="mt-3">
+                                <li>Developed and executed automated test scripts using Worksoft Certify for different modules in SAP, ensuring efficient and reliable testing</li>
+                                <li>Created and maintained automated testing frameworks using Selenium with Java, improving testing coverage and reducing manual testing efforts</li>
+                                <li>Automated critical SAP business processes, reducing manual testing by 70% and improving test accuracy</li>
+                                <li>Designed and implemented automated test scripts using Selenium with Python and Robot Framework to streamline web application testing and enhance test efficiency</li>
+                                <li>Collaborated with cross-functional teams to identify testing requirements, create detailed test plans, and resolve defects</li>
+                                <li>Proficient in automation testing using Worksoft Certify, Selenium (Java/Python), Cucumber, and Basics in Tosca</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center section-title">
+                    <h2 class="display-4 fw-bold">Technical Skills</h2>
+                    <p class="lead text-muted">Technologies and tools I work with</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h5>Data Visualization</h5>
+                        <p>Power BI, Charts, DAX, Dashboards</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-table"></i>
+                        </div>
+                        <h5>Data Handling</h5>
+                        <p>MS Excel, Pivot Tables, VLOOKUP, Power Query</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h5>Database</h5>
+                        <p>SQL, Joins, Aggregations, Subqueries</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h5>Programming</h5>
+                        <p>Python, Pandas, Numpy, Matplotlib</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h5>ETL Tools</h5>
+                        <p>Informatica</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h5>Automation</h5>
+                        <p>Selenium, Worksoft Certify, Robot Framework</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h5>Soft Skills</h5>
+                        <p>Communication, Problem-solving, Attention to Detail</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <h5>Programming</h5>
+                        <p>Java, Cucumber, Tosca</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center section-title">
+                    <h2 class="display-4 fw-bold">Portfolio Projects</h2>
+                    <p class="lead text-muted">End-to-end analytics projects focused on business insights</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <h5>Power&nbsp;BI Sales Dashboard</h5>
+                        <p class="text-muted">Designed an interactive dashboard to analyze sales trends, regional performance, and top-performing products.</p>
+                        <div class="mb-3">
+                            <span class="project-tech">Power&nbsp;BI</span>
+                            <span class="project-tech">DAX</span>
+                            <span class="project-tech">Sales Analytics</span>
+                        </div>
+                        <h6>Key Features:</h6>
+                        <ul class="small text-muted">
+                            <li>Monthly Sales Trend Line Chart</li>
+                            <li>Sales & Profit by Region Pie Chart</li>
+                            <li>Category-wise Treemap</li>
+                            <li>State-wise Sales Map</li>
+                        </ul>
+                        <p class="text-success"><strong>Outcome:</strong> Helped simulate real-time decision-making by highlighting high-performing regions and products.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <h5>Power&nbsp;BI HR Analytics Dashboard</h5>
+                        <p class="text-muted">Developed an HR insights dashboard to analyze attrition, employee distribution, and performance across departments.</p>
+                        <div class="mb-3">
+                            <span class="project-tech">Power&nbsp;BI</span>
+                            <span class="project-tech">HR Analytics</span>
+                            <span class="project-tech">Workforce Planning</span>
+                        </div>
+                        <h6>Key Features:</h6>
+                        <ul class="small text-muted">
+                            <li>Gender Ratio Analysis</li>
+                            <li>Employee Distribution by Age & Department</li>
+                            <li>Attrition Rate Analysis</li>
+                            <li>Hiring Trends</li>
+                        </ul>
+                        <p class="text-success"><strong>Outcome:</strong> Demonstrated workforce planning and retention strategy insights.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <h5>Marketing Campaign Analytics Dashboard</h5>
+                        <p class="text-muted">Built a campaign performance dashboard with CTR, Conversion Rate, CPC across different campaigns and impressions.</p>
+                        <div class="mb-3">
+                            <span class="project-tech">Power&nbsp;BI</span>
+                            <span class="project-tech">Marketing Analytics</span>
+                            <span class="project-tech">Performance Metrics</span>
+                        </div>
+                        <h6>Key Features:</h6>
+                        <ul class="small text-muted">
+                            <li>Scatter Plot for CTR vs Conversion</li>
+                            <li>Bubble Chart Analysis</li>
+                            <li>KPI Cards</li>
+                            <li>Campaign Performance Metrics</li>
+                        </ul>
+                        <p class="text-success"><strong>Outcome:</strong> Identified top-performing campaigns and cost-efficient channels using performance metrics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center section-title">
+                    <h2 class="display-4 fw-bold">Education & Certifications</h2>
+                    <p class="lead text-muted">My academic background and professional development</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow">
+                        <div class="card-body text-center">
+                            <i class="fas fa-graduation-cap text-primary" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                            <h4>Bachelor of Technology (B.Tech)</h4>
+                            <h6 class="text-muted">Electrical & Electronics Engineering</h6>
+                            <p class="text-muted">Jawaharlal Nehru Technological University Hyderabad</p>
+                            <p class="text-muted">Graduated: 2021</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="mb-4">Professional Certifications</h4>
+                    <div class="certification-badge">
+                        <h5><i class="fas fa-certificate me-2"></i>Data Analytics Certification</h5>
+                        <p class="mb-0">Frontline EduTech Pvt Ltd • 2024</p>
+                    </div>
+                    <div class="certification-badge">
+                        <h5><i class="fas fa-certificate me-2"></i>IBM Data Science Certification</h5>
+                        <p class="mb-0">Coursera • 2022</p>
+                    </div>
+                    <div class="certification-badge">
+                        <h5><i class="fas fa-certificate me-2"></i>Python & Django Certification</h5>
+                        <p class="mb-0">EduBridge Pvt Ltd • 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center section-title">
+                    <h2 class="display-4 fw-bold">Get In Touch</h2>
+                    <p class="lead text-muted">Let's work together on your next data analytics project</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h4>Contact Information</h4>
+                        <p><i class="fas fa-envelope me-2"></i>Swathiburgula333@gmail.com</p>
+                        <p><i class="fas fa-phone me-2"></i>+91 7672071582</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Hyderabad, India</p>
+                        <div class="social-links mt-4">
+                            <a href="http://www.linkedin.com/in/swathi-burgula" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/SwathiBurgula" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.hackerrank.com/profile/swathiburgula70" target="_blank" title="HackerRank"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 Swathi Burgula. All rights reserved.</p>
+            <p class="mb-0">Built with ❤️ using modern web technologies</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Add active class to navigation links
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
